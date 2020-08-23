@@ -1,0 +1,95 @@
+((λx.((λy.(x y))x))(λz.w))
+
+----- Write-up -----
+
+step 1 - peeling off layered parentheses:
+
+(
+    (λx.((λy.(x y))x))(λz.w)
+)
+
+step 2 - remove outer/useless/redundant parentheses :
+
+(λx.((λy.(x y))x))(λz.w)
+
+step 3 - separating :
+
+(λx.((λy.(x y))x))
+(λz.w)
+
+step 4 - peeling off parentheses on first/deepest lambda :
+
+(
+    λx.((λy.(x y))x)
+)
+(λz.w)
+
+step 5 - remove outer/useless/redundant parentheses :
+
+λx.((λy.(x y))x)
+(λz.w)
+
+step 6 - x := (λz.w) :
+
+((λy.((λz.w) y))(λz.w))
+
+step 7 - peeling off layered parentheses :
+(
+    (λy.((λz.w) y))(λz.w)
+)
+
+step 8 - remove outer/useless/redundant parentheses :
+
+(λy.((λz.w) y))(λz.w)
+
+step 9 - separating :
+
+(λy.((λz.w) y))
+(λz.w)
+
+step 10 - peeling off parentheses on first/deepest lambda :
+
+(
+    λy.((λz.w) y)
+)
+(λz.w)
+
+step 11 - remove outer/useless/redundant parentheses :
+
+λy.((λz.w) y)
+(λz.w)
+
+step 12 - y := (λz.w) :
+
+((λz.w) (λz.w))
+
+step 13 - peeling off layered parentheses :
+
+(
+    (λz.w) (λz.w)
+)
+
+step 14 - remove outer/useless/redundant parentheses :
+
+(λz.w) (λz.w)
+
+step 15 - separating :
+
+(λz.w)
+(λz.w)
+
+step 16 - peeling off parentheses on first/deepest lambda :
+
+(
+    λz.w
+)
+(λz.w)
+
+step 17 - remove outer/useless/redundant parentheses :
+
+λz.w
+(λz.w)
+
+step 18 - z := (λz.w) :
+
+w

@@ -1,0 +1,65 @@
+((λx.(x y))(λz.z))
+
+----- Write-up -----
+
+step 1 - peeling off layered parentheses :
+
+(
+    (λx.(x y))(λz.z)
+)
+
+step 2 - remove outer/useless/redundant parentheses :
+
+(λx.(x y))(λz.z)
+
+step 3 - separating :
+
+(λx.(x y))
+(λz.z)
+
+step 4 - peeling off parentheses on first/deepest lambda :
+
+(
+    λx.(x y)
+)
+(λz.z)
+
+step 5 - remove outer/useless/redundant parentheses :
+
+λx.(x y)
+(λz.z)
+
+step 6 - x := (λz.z) :
+
+((λz.z) y)
+
+step 7 - peeling off layered parentheses :
+
+(
+    (λz.z) y
+)
+
+step 8 - remove outer/useless/redundant parentheses :
+
+(λz.z) y
+
+step 9 - separating :
+
+(λz.z)
+y
+
+step 10 - peeling off parentheses on first/deepest lambda :
+
+(
+    λz.z
+)
+y
+
+step 11 - remove outer/useless/redundant parentheses :
+
+λz.z
+y
+
+step 12 - z := y :
+
+y
