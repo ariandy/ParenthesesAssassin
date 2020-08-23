@@ -1,3 +1,10 @@
+<a href="">
+  <img src="https://img.shields.io/badge/Version-0.0.2-blue.svg"/>
+</a>
+<a href="">
+  <img src="https://img.shields.io/badge/Written_By-Ariandy-green"/>
+</a>
+
 # λ-PRcSA
 ```
 !!! Before you read this stuff, make sure you got the first principle of Lambda Calculus. !!! 
@@ -37,7 +44,7 @@ Let me repeat the explanation about Defeat-In-Detail.
 ```
 We use the same idea to eliminate the parentheses ambusher.
 ```
-Wait a sec, Ri. Is it a different rule to eliminate those things?
+Wait a sec, Ri. Is it a different set of rules to eliminate those things?
 ```
 Absolutely, **NO**. Still stick to the Lambda Calculus rules (`α-equivalence`, `β-reduction`, currying, etc)!<br>
 It's just an additional way to carefully reduce all of 'em (except the divergence one).
@@ -53,5 +60,5 @@ So, this is the plan:
 Because this stratagems, sometimes I call it **λ-PRcSA**.
 
 ## Coming soon
-- I want to elaborate the rule of λ-PRcSA.
+- I wanna elaborate the rules of λ-PRcSA.
 Once again, I don't explain the basic of Lambda Calculus on this stuff. If you read this, I expect you already grasping the basic rules of Lambda Calculus and know how to evaluate the shorter expressions.
